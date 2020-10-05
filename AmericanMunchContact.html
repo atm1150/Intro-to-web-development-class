@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+	<title>American Munch</title>
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	
+</head>
+
+<link href="americanmunchstyles.css" rel="stylesheet" type="text/css" />
+
+<style>
+	 section {
+		text-align: center;
+		}
+	label {
+		font-weight: bold;
+		}
+</style>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+<body>
+	
+	<header class="jumbotron">
+		<h1>American Munch</h1>
+		<h2>New Location Coming Soon!</h2>
+	</header>
+	
+		<hr />
+		
+		<nav>
+			<a class="btn badge-pill" href="AmericanMunchHome.html"><img src="images/rename.svg"/>Home</a>
+			<a class="btn badge-pill" href="AmericanMunchMenu.html">Menu</a>
+			<a class="btn badge-pill" href="AmericanMunchContact.html">Contact Us</a>
+		</nav>
+		
+		<hr/>
+		
+	<div id="carousel" class="carousel slide" data-ride="carousel">
+		<div class="ctext">
+			<div class="carousel-item active">
+				<h4>New Location</h4>
+				<p>Will open next year on the north side!</p>
+			</div>
+			<div class="carousel-item">
+				<h4>Seasonal Menu</h4>
+				<p>Get ready for pumpkin spice burgers!</p>
+			</div>
+			<div class="carousel-item">
+				<h4>Drink of the Month</h4>
+				<p>The SG Special Brew shall be available for a short time only. Get yours today!</p>
+			</div>
+		</div>
+	</div>
+	
+<script>
+	
+function validateForm() {
+	var x = document.forms["contactform"]["Name"].value;
+	var y = document.forms["contactform"]["Email"].value;
+	var z = document.forms["contactform"]["Phone"].value;
+	//var w = document.forms["contactform"]["dates"].value;
+	if (x != "" && y != "" && z != "") {
+    alert("Thank you for providing your contact details. We will get in touch as soon as possible!");
+    return false;
+	}
+	else{
+	alert("Not all contact info has been given.");
+	return false;
+	}	
+	}
+	
+	
+</script>
+	
+	<section>
+		
+				<form name="contactform"  onsubmit="return validateForm()" action="submit.html"  method="POST">
+				
+				<label for="Name">Name:</label>
+				<input type="text" id="Name" name="Name"><br />
+				
+				<label for="Email">Email:</label>
+				<input type="text" id="Email" name="Email"><br />
+				
+				<label for="Phone">Phone:</label>
+				<input type="text" id="Phone" name="Phone"><br />
+				
+				<label for="contact">Reason for Inquiry:</label>
+					<select id="contact" name="contact">
+					<option value="catering" selected>Catering</option>
+					<option value="PrivateParty">Private Party</option>
+					<option value="Feedback">Feedback</option>
+					<option value="other">Other</option>
+					</select><br />
+				<label for="info">Additional Information:</label><br />
+				<textarea id="info"></textarea><br/>
+				Have you been to the restaurant?<input type="radio" name="answer" value="NO" checked/>	No	<input type="radio" name="answer" value="YES"/>	Yes<br/>
+				Best days to contact you:
+				<input type="checkbox" name="dates" value="M"/>M
+				<input type="checkbox" name="dates" value="T"/>T
+				<input type="checkbox" name="dates" value="W"/>W
+				<input type="checkbox" name="dates" value="Th"/>Th
+				<input type="checkbox" name="dates" value="F"/>F
+				<br/><input type="submit" value="Send Request"/>
+
+	</section>
+			
+	<noscript>Your browser currently has JavaScript disabled or does not support JavaScript. Please enable JavaScript or switch to a browser that suppors JavaScript to have the optimal experience on our site!</noscript>
+			
+	<footer>
+		<hr />
+		<p>123 Main St., Indianapolis, Indiana, 12345</p>
+		<p>812-123-4567</p>
+	</footer>
+	
